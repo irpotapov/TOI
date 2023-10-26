@@ -1,0 +1,68 @@
+#container {
+	text-align: center;
+}
+
+#message {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 400px;
+	height: 50px;
+	resize: none;
+	margin-top: 15px;
+	border: 3px solid #dddddd;
+	border-radius: 10px;
+	border-color: purple;
+	text-align: center;
+	font-size: 28px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	background-color: #f2f2;
+	color: #333;
+	padding-top: 10px;
+}
+
+button {
+	background: #9400d3;
+	border: 2px solid purple;
+	color: white;
+	border-radius: 6px;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 24px;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 0 0 0 2px #dddddd;
+}
+
+td, tr {
+	border: 2px solid #dddddd;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+td:hover {
+	transform: scale(1.2);
+	color: purple;
+}
+
+button:hover {
+	transform: scale(1.02);
+}
