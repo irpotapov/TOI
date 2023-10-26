@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <!--<center>
+            <ul>
+                <li>
+                    <a href="home.html"
+                        onmouseover = "showMsg('Ориентальный кот');"
+                        onmouseout = "showMsg('');">
+                    <img name="button1" height="100" src="https://lapkins.ru/upload/uf/f3e/f3e8cd571c92408b6f851558df50549c.jpg"></a>
+                </li>
+                <li>
+                    <a href="home.html"
+                    onmouseover = "showMsg('Сиамский кот');"
+                        onmouseout = "showMsg('');">
+                    <img name="button1" height="100" src="https://lapkins.ru/upload/uf/2d8/2d876b36508cf9ed01800d9fce3ca663.jpg"></a>
+                </li>
+                <li>
+                    <a href="home.html"
+                    onmouseover = "showMsg('Русская голубая кошка');"
+                        onmouseout = "showMsg('');">
+                    <img name="button1" height="100" src="https://lapkins.ru/upload/uf/789/789dcc17e2ec44f09d06dd53d68acfb4.jpg"></a>
+                </li>
+            </ul>
+            <form name="picform">
+                <textarea name="message" rows="2" cols="40" wrap="virtual">Выберите рисунок для получения его описания!</textarea><br>
+                <input type="hidden" name="go" value="">
+            </form>
+        </center>
+
+        <script language="JavaScript">
+            function showMsg(text) {
+                document.picform.message.value = text;
+            }
+        </script> -->
+
+        <form name="changecolorbutton">
+            <input type="button" name="but" value="Нажми меня!!!" onmouseover="mouseIn()" onmouseout="mouseOut()">
+        </form>
+
+        <script lang="JavaScript">
+            var default_color;
+            function mouseIn() {
+                default_color = document.changecolorbutton.but.style.background = "red";
+            }
+            function mouseOut() {
+                default_color = document.changecolorbutton.but.style.background = "";
+            }
+        </script>
+
+    </body>
+</html>
