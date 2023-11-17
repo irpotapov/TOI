@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Калькулятор</title>
+</head>
+
+<style>
+	td{
+		border-radius: 15px;
+		border-width: 3px;
+		font-size: 22px;
+	}
+	input{
+		font-size: 20px;
+	}
+	#screen{
+		border-radius: 15px;
+	}
+	#t1{
+		border-radius: 15px;
+	}
+	#font1{
+		font-size: 25px;
+	}
+	#button{
+		border-radius: 5px;
+	}
+</style>
+
+<script language="JavaScript">
+	<!--
+	var i0=0, j0=0, n=0, m=0, step_i=0, step_j=0;
+	function my_func() {
+		n=Number.parseInt(document.form1.stop_i.value);
+		i0=Number.parseInt(document.form1.start_i.value);
+		step_i=Number.parseInt(document.form1.step_i.value);
+		m=Number.parseInt(document.form1.stop_j.value);
+		j0=Number.parseInt(document.form1.start_j.value);
+		step_j=Number.parseInt(document.form1.step_j.value);
+
+		var res = 0;
+		for (var i = i0; i <= n; i += step_i) {
+			for (var j = j0; j <= m; j += step_j) {
+				res += (i + j);
+			}
+		}
+
+			document.form1.screen.value = res;
+	}
+	//-->
+</script>
+<body>
+	<center>
+		<form name="form1">
+			<table bgcolor="#271007" id="t1">
+				<tbody>
+					<tr>
+						<td>
+							<table bgcolor="#ECCDB1" border="4" cellpadding="0" cellspacing="10"  id="t1">
+								<tbody>
+									<tr align="middle">
+										<td colspan="5" id="t1"><input name="screen" value="0" size="28" id="screen"></td>
+									</tr>
+									<tr align="middle">
+										<td colspan="4" id="t1"><b><font color="#A96946">Специальный калькулятор</font></b></td>
+									</tr>
+									<tr align="middle">
+										<td>От (для i)</td>
+										<td colspan="1" id="t1"><input name="start_i" value="1" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>До (для i)</td>
+										<td colspan="1"><input name="stop_i" value="10" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>Шаг (для i)</td>
+										<td colspan="1"><input name="step_i" value="1" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>От (для j)</td>
+										<td colspan="1"><input name="start_j" value="1" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>До (для j)</td>
+										<td colspan="1"><input name="stop_j" value="10" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>Шаг (для j)</td>
+										<td colspan="1"><input name="step_j" value="1" size="4"></td>
+									</tr>
+									<tr align="middle">
+										<td>Решить</td>
+										<td>
+											<input name="result" onclick="my_func()" type="button" value="V" id="button" size="130px">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
