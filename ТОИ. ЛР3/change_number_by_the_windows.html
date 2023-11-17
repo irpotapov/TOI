@@ -1,0 +1,51 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<div id="container">
+		<div id="main_window">
+			<h1>Main window</h1>
+			<p><span id="main_digit">0</span></p>
+		</div>
+
+		<script>
+
+			function update_main_digit() {
+				var main_digit = document.getElementById('main_digit');
+				main_digit.textContent = parseInt(main_digit.textContent) + 1;
+			}
+
+			function update_child_digit() {
+				var childWindow = window.open('', 'child_window', 'width=400, height=200');
+				var child_digit = childWindow.document.getElementById('child_digit');
+				if (child_digit) {
+					child_digit.textContent = parseInt(child_digit.textContent) + 1;
+				} else {
+					childWindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet"></head><body><div id="child_window"><h1>Child window</h1><p><span id = "child_digit">1</span></p></div></body></html>');
+				}
+			}
+
+			function update () {
+				update_child_digit();
+				update_main_digit();
+			}
+
+			// Вызываем функцию, чтобы открыть дочернее окно и установить его начальное содержимое
+			update_child_digit();
+
+			setInterval(update, 10000);
+
+		</script>
+
+	</div>	
+
+</body>
+</html>
