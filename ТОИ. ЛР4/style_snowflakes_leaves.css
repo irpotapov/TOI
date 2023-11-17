@@ -1,0 +1,78 @@
+html {
+	height: 100%;
+}
+
+body {
+  background: radial-gradient(at top, #123, #111); 
+  overflow: hidden;
+}
+
+.season_selector {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+#snowflakes_btn, #leaf_btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 36px;
+  margin: 4px 8px;
+  cursor: pointer;
+  transition: font-size 0.3s;
+  z-index: 1;
+}
+
+#snowflakes_btn:hover, #leaf_btn:hover {
+  font-size: 40px;
+}
+
+#falling_elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: snowfall linear infinite;
+}
+
+.leaf {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	opacity: 0.8;
+	pointer-events: none;
+	animation: leaffall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes leaffall {
+	0% {
+		transform: translateY(-100%) rotate(0deg);
+	}
+	100% {
+		transform: translateY(100vh) rotate(45deg);
+	}
+}
