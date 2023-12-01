@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final_form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Difficult Form</title>
+</head>
+<body>
+        <form action="">
+            <fieldset>
+                <legend></legend>
+                <div class="container">
+                    <p id="p1">УЧЕТНАЯ КАРТОЧКА №</p>
+            
+                    <div class="label-familiya">
+                        <div class="box-label-familiya">
+                            <label for="familiya" title="Поля обязательно для заполнения">Фамилия</label>
+                        </div>
+                    </div>
+                    <div class="familiya">
+                        <div class="box-input-familiya">
+                            <input type="text" name="familiya" required="true">
+                        </div>
+                    </div>
+            
+                    <div class="label-imya">
+                        <div class="box-label-imya">
+                            <label for="imya">Имя</label>
+                        </div>
+                    </div>
+                    <div class="imya">
+                        <div class="box-input-imya">
+                            <input type="text" name="imya" required>
+                        </div>
+                    </div>
+            
+                    <div class="label-otchestvo">
+                        <div class="box-label-otchestvo">
+                            <label for="otchestvo">Отчество</label>
+                        </div>
+                    </div>
+                    <div class="otchestvo">
+                        <div class="box-input-otchestvo">
+                            <input type="text" name="otchestvo">
+                        </div>
+                    </div>
+            
+                    <div class="label-gender">
+                        <div class="box-label-gender">
+                            <label for="gender" aria-required="true">Пол</label>
+                        </div>
+                    </div>
+                    <div class="gender">
+                        <div class="box-select-gender">
+                            <select name="gender" required>
+                                <option value=""></option>
+                                <option value="mail">М</option>
+                                <option value="fimail">Ж</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="label-birthday">
+                        <div class="box-label-birthday">
+                            <label for="birthday">Дата рождения</label>
+                        </div>
+                    </div>
+                    <div class="birthday">
+                        <div class="box-input-birthday">
+                            <input type="date" name="birthday" required>
+                        </div>
+                    </div>
+            
+                    <div class="label-type-regist">
+                      <div class="box-label-type-reg">
+                          <label for="type-registration">Тип регистрации</label>
+                      </div>
+                  </div>
+                  <div class="type-registration">
+                      <div class="box-select-type-reg">
+                          <select name="type-registration">
+                              <option value=""></option>
+                              <option value="Постоянная">Постоянная</option>
+                              <option value="Временная">Временная</option>
+                          </select>
+                      </div>
+                  </div>
+            
+                  <div class="label-address-regist">
+                      <div class="box-label-add-reg">
+                          <label for="address-registration">Адрес регистрации</label>
+                      </div>
+                  </div>
+                  <div class="address-registration">
+                      <div class="box-input-add-reg">
+                          <input type="text" name="address-registration">
+                      </div>
+                  </div>
+            
+                  <div class="label-address-resident">
+                      <div class="box-label-add-res">
+                          <label for="address-residential">Адрес проживания</label>
+                      </div>
+                  </div>
+                  <div class="address-residential">
+                      <div class="box-input-add-res">
+                          <input type="text" name="address-residential">
+                      </div>
+                  </div>
+            
+                  <div class="label-place-birthday">
+                      <div class="box-label-place-brth">
+                          <label for="place-birthday">Место рождения</label>
+                      </div>
+                  </div>
+                  <div class="place-birthday">
+                      <div class="box-input-place-brth">
+                          <input type="text" name="place-birthday">
+                      </div>
+                  </div>
+                  <div class="label-merital-status">
+                    <div class="box-label-mer-stat">
+                        <label for="merital-status">Состоит в браке</label>
+                    </div>
+                </div>
+                <div class="merital-status">
+                    <div class="box-select-mer-stat">
+                        <select name="merital-status" required>
+                            <option value=""></option>
+                            <option value="Постоянная">Не в браке</option>
+                            <option value="Временная">В браке</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="label-citizenship">
+                    <div class="box-label-citizen">
+                        <label for="citizenship">Гражданство</label>
+                    </div>
+                </div>
+                <div class="citizenship">
+                    <div class="box-input-citizen">
+                        <input type="text" name="citizenship">
+                    </div>
+                </div>
+                <div class="label-snils">
+                    <div class="box-label-snils">
+                        <label for="snils">СНИЛС</label>
+                    </div>
+                </div>
+                <div class="snils">
+                    <div class="box-input-snils">
+                        <input type="text" name="snils" id="snils-inp" pattern="^\d{3}-\d{3}-\d{3} \d{2}$">
+                        <div class="span-snils"></div>
+                    </div>
+                </div>
+                <div class="label-phone">
+                    <div class="box-label-phone">
+                        <label for="phone">Мобильный телефон</label>
+                    </div>
+                </div>
+                <div class="phone">
+                    <div class="box-input-phone">
+                        <input type="tel" name="phone" id="phone-inp" pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+                        <div class="span-phone"></div>
+                    </div>
+                </div>
+                <div class="phone-notificate">
+                    <div class="box-checkbox-phone-notif">
+                        <input type="checkbox" name="phone-notificate">
+                        <label for="phone-notificate">Получать уведомления</label>
+                    </div>
+                </div>
+                <div class="label-inn">
+                    <div class="box-label-inn">
+                        <label for="inn">ИНН</label>
+                    </div>
+                </div>
+                <div class="inn">
+                    <div class="box-input-inn">
+                        <input type="text" name="inn">
+                    </div>
+                </div>
+                <div class="label-email">
+                    <div class="box-label-email">
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="box-input-email">
+                        <input type="email" name="email" id="email-inp" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    </div>
+                </div>
+                <div class="email-notificate">
+                    <div class="box-checkbox-email-notif">
+                        <input type="checkbox" name="email-notificate">
+                        <label for="email-notificate">Получать уведомления</label>
+                    </div>
+                </div>
+                <p id="p2">СВЕДЕНИЯ О ДОКУМЕНТЕ, УДОСТОВЕРЯЮЩЕМ ЛИЧНОСТЬ</p>
+                    <div class="label-naim-document">
+                        <div class="box-label-naim-docum">
+                            <label for="naim-document">Наименование</label>
+                        </div>
+                    </div>
+                    <div class="naim-document">
+                        <div class="box-selector-naim-docum">
+                            <select name="naimenovanie" id="naimenovanie">
+                                <option value="">Выберите документ</option>
+                                <option value="Паспорт РФ">Паспорт РФ</option>
+                                <option value="Свидетельство о рождении">Свидетельство о рождении – для детей до 14 лет</option>
+                                <option value="Военный билет">Военный билет</option>
+                                <option value="Заграничный паспорт">Заграничный паспорт</option>
+                                <option value="Паспорт инностранного гражданина">Паспорт инностранного гражданина</option>
+                                <option value="Разрешение на временное проживание">Разрешение на временное проживание</option>
+                                <option value="Вид на жительство в РФ">Вид на жительство в РФ</option>
+                                <option value="Иной документ">Иной документ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="label-seriya-pasport">
+                        <div class="box-label-seriya-pas">
+                            <label for="seriya-pasport">Серия</label>
+                        </div>
+                    </div>
+                    <div class="seriya-pasport">
+                        <div class="box-input-seriya-pas">
+                            <input type="text" name="seriya-pasport" id="seriya-pasport">
+                        </div>
+                    </div>
+                    <div class="label-number-pasport">
+                        <div class="box-label-number-pas">
+                            <label for="number-pasport">Номер</label>
+                        </div>
+                    </div>
+                    <div class="number-pasport">
+                        <div class="box-input-number-pas">
+                            <input type="text" name="number-pasport">
+                        </div>
+                    </div>
+                    <div class="label-data-vidachi">
+                        <div class="box-label-data-vidachi">
+                            <label for="data-vidachi">Выдан</label>
+                        </div>
+                    </div>
+                    <div class="data-vidachi">
+                        <div class="box-input-data-vidachi">
+                            <input type="date" name="data-vidachi">
+                        </div>
+                    </div>
+                    <div class="label-kem-vidan">
+                        <div class="box-label-kem-vidan">
+                            <label for="kem-vidan">Кем выдан</label>
+                        </div>
+                    </div>
+                    <div class="kem-vidan">
+                        <div class="box-input-kem-vidan">
+                            <input type="text" name="kem-vidan">
+                        </div>
+                    </div>
+                    <div class="label-kod-podrazdeleniya">
+                        <div class="box-label-kod-podraz">
+                            <label for="kod-podrazdeleniya">Код подразделения</label>
+                        </div>
+                    </div>
+                    <div class="kod-podrazdeleniya">
+                        <div class="box-input-kod-podraz">
+                            <input type="text" name="kod-podrazdeleniya">
+                        </div>
+                    </div>
+                    <input type="submit" value="Сохранить" class="btn">
+                </div>
+            </fieldset>
+        </form>
+
+    <script src="final_dif_form.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  width: 40%; 
+  margin: 0 auto; 
+  padding: 10px; 
+  border: 2px solid #000; 
+  border-radius: 10px; 
+  text-align: center; 
+  background: rgb(72, 255, 194);
+  transform: translateY(50%);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  width: auto;
+  padding: 20px;
+  background: aquamarine;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#p1 {
+  grid-column: 1/6; grid-row: 1/2;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+.label-familiya {grid-column: 1/2; grid-row: 2/3;}
+.label-familiya .box-label-familiya {
+  font-size: 20px;
+  text-align: center;
+}
+
+.familiya {grid-column: 1/2; grid-row: 3/4;}
+.familiya .box-input-familiya input {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.label-imya {grid-column: 2/3; grid-row: 2/3;}
+.label-imya .box-label-imya {
+  font-size: 20px;
+  text-align: center;
+}
+
+.imya {grid-column: 2/3; grid-row: 3/4;}
+.imya .box-input-imya input {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.label-otchestvo {grid-column: 3/4; grid-row: 2/3;}
+.label-otchestvo .box-label-otchestvo {
+  font-size: 20px;
+  text-align: center;
+}
+
+.otchestvo {grid-column: 3/4; grid-row: 3/4;}
+.otchestvo .box-input-otchestvo input {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.label-gender {grid-column: 4/5; grid-row: 2/3;}
+.label-gender .box-label-gender {
+  font-size: 20px;
+  text-align: center;
+}
+
+.gender {grid-column: 4/5; grid-row: 3/4;}
+.gender .box-select-gender select {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;;
+}
+
+.label-birthday {grid-column: 5/6; grid-row: 2/3;}
+.label-birthday .box-label-birthday {
+  font-size: 20px;
+  margin-inline: 30px;
+}
+
+.birthday {grid-column: 5/6; grid-row: 3/4;}
+.birthday .box-input-birthday input {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: 20px;
+  text-align: center;;
+}
+
+.label-type-regist {grid-column: 1/2; grid-row: 4/5;}
+.label-type-regist .box-label-type-reg {
+    font-size: 20px;
+}
+
+.type-registration {grid-column: 2/6; grid-row: 4/5;}
+.type-registration .box-select-type-reg select {
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -25px;
+}
+
+.label-address-regist {grid-column: 1/2; grid-row: 5/6;}
+.label-address-regist .box-label-add-reg label {
+    font-size: 20px; 
+}
+
+.address-registration {grid-column: 2/6; grid-row: 5/6;}
+.address-registration .box-input-add-reg input {
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    height: 20px;
+    font-size: 18px;
+    margin-inline: -25px;
+    padding-left: 10px;
+}
+
+.label-address-resident {grid-column: 1/2; grid-row: 6/7;}
+.label-address-resident .box-label-add-res {
+    font-size: 20px;
+}
+
+.address-residential {grid-column: 2/6; grid-row: 6/7;}
+.address-residential .box-input-add-res input {
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    height: 20px;
+    font-size: 18px;
+    margin-inline: -25px;
+    padding-left: 10px;
+}
+
+.label-place-birthday {grid-column: 1/2; grid-row: 7/8;}
+.label-place-birthday .box-label-place-brth label {
+    font-size: 20px;
+}
+
+.place-birthday {grid-column: 2/6; grid-row: 7/8;}
+.place-birthday .box-input-place-brth input {
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    height: 20px;
+    font-size: 18px;
+    margin-inline: -25px;
+    padding-left: 10px;
+}
+
+.label-merital-status {grid-column: 1/2; grid-row: 8/9;}
+.label-merital-status .box-label-mer-stat label {
+    font-size: 20px;
+}
+
+.merital-status {grid-column: 2/3; grid-row: 8/9;}
+.merital-status .box-select-mer-stat select {
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -25px;
+}
+
+.label-citizenship {grid-column: 3/4; grid-row: 8/9;}
+.label-citizenship .box-label-citizen label {
+    font-size: 20px;
+    margin-inline: -135px;
+}
+
+.citizenship {grid-column: 4/5; grid-row: 8/9;}
+.citizenship .box-input-citizen input {
+    width: 660%;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -140px;
+    padding-left: 10px;
+}
+
+.label-snils {grid-column: 1/2; grid-row: 9/10;}
+.label-snils .box-label-snils {
+    font-size: 20px;
+}
+
+.snils {grid-column: 2/3; grid-row: 9/10;}
+.snils .box-input-snils input {
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -25px;
+    padding-left: 10px;
+}
+.snils .box-input-snils input:invalid {
+  border: 2px solid red;
+}
+
+.label-phone {grid-column: 3/4; grid-row: 9/10;}
+.label-phone .box-label-phone {
+    font-size: 20px;
+    margin-inline: -135px;
+}
+
+.phone {grid-column: 4/5; grid-row: 9/10;}
+.phone .box-input-phone input {
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -140px;
+    padding-left: 10px;
+}
+.phone .box-input-phone input:invalid {
+  border: 2px solid red;
+}
+
+.phone-notificate {grid-column: 5/6; grid-row: 9/10;}
+.phone-notificate .box-checkbox-phone-notif {
+    font-size: 20px;
+    margin-inline: 50px;
+}
+
+.label-inn {grid-column: 1/2; grid-row: 10/11;}
+.label-inn .box-label-inn {
+    font-size: 20px;
+}
+
+.inn {grid-column: 2/3; grid-row: 10/11;}
+.inn .box-input-inn input {
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -25px;
+    padding-left: 10px;
+}
+
+.label-email {grid-column: 3/4; grid-row: 10/11;}
+.label-email .box-label-email {
+    font-size: 20px;
+    margin-inline: -135px;
+}
+
+.email {grid-column: 4/5; grid-row: 10/11;}
+.email .box-input-email input {
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-inline: -140px;
+    padding-left: 10px;
+}
+.email .box-input-email input:invalid {
+  border: 2px solid red;
+}
+
+.email-notificate {grid-column: 5/6; grid-row: 10/11;}
+.email-notificate .box-checkbox-email-notif {
+    font-size: 20px;
+    margin-inline: 50px;
+}
+
+#p2 {
+  grid-column: 1/6; grid-row: 11/12;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.label-naim-document {grid-column: 1/2; grid-row: 12/13;}
+.label-naim-document .box-label-naim-docum {
+  font-size: 20px;
+}
+
+.naim-document {grid-column: 2/3; grid-row: 12/13;}
+.box-selector-naim-docum select {
+  width: 107%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -25px;
+}
+
+.label-seriya-pasport {grid-column: 3/4; grid-row: 12/13;}
+.label-seriya-pasport .box-label-seriya-pas {
+  font-size: 20px;
+  margin-inline: -2px;
+}
+
+.seriya-pasport {grid-column: 4/5; grid-row: 12/13;}
+.box-input-seriya-pas input {
+  width: 200%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -150px;
+  text-align: center;
+}
+
+.label-number-pasport {grid-column: 5/6; grid-row: 12/13;}
+.box-label-number-pas {
+  font-size: 20px;
+  margin-inline: -115px;
+}
+
+.number-pasport {grid-column: 5/6; grid-row: 12/13;}
+.box-input-number-pas input {
+  width: 30%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -40px;
+  text-align: center;
+}
+
+.label-data-vidachi {grid-column: 6/7; grid-row: 12/13;}
+.label-data-vidachi .box-label-data-vidachi {
+  font-size: 20px;
+  margin-inline: -280px;
+}
+
+.data-vidachi {grid-column: 7/8; grid-row: 12/13;}
+.data-vidachi .box-input-data-vidachi input {
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -220px;
+  text-align: center;
+}
+
+.label-kem-vidan {grid-column: 1/2; grid-row: 13/14;}
+.label-kem-vidan .box-label-kem-vidan {
+  font-size: 20px;
+}
+
+.kem-vidan {grid-column: 2/3; grid-row: 13/14;}
+.kem-vidan .box-input-kem-vidan input {
+  width: 220%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -25px;
+}
+
+.label-kod-podrazdeleniya {grid-column: 1/2; grid-row: 14/15;}
+.label-kod-podrazdeleniya .box-label-kod-podraz {
+  font-size: 20px;
+}
+
+.kod-podrazdeleniya {grid-column: 2/3; grid-row: 14/15;}
+.kod-podrazdeleniya .box-input-kod-podraz input {
+  width: 30%;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  margin-inline: -25px;
+  text-align: center;
+}
+
+.btn {grid-column: 1/6; grid-row: 15/16;}
+.btn {
+  width: 10%;
+  font-size: 20px;
+  border-radius: 6px;
+  border-bottom: 1px solid blueviolet;
+  padding: 0.3em;
+}
