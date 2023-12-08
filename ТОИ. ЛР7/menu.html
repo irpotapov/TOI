@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 7. Создание меню с помощью JS.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="dropdown.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row-header">
+                    <ul>
+                        <div class="menu-one">
+                            <li><button onclick="show_content_one()" class="dropbtn-one">Меню 1</button></li>
+                            <div id="dropdown-one" class="dropdown-content-one">
+                                <a href="#">Ссылка 1</a>
+                                <a href="#">Ссылка 2</a>
+                                <a href="#">Ссылка 3</a>
+                            </div>
+                        </div>
+                        <div class="menu-two">
+                            <li><button onclick="show_content_two()" class="dropbtn-two">Меню 2</button></li>
+                            <div id="dropdown-two" class="dropdown-content-two">
+                                <a href="#">Ссылка 1</a>
+                                <a href="#">Ссылка 2</a>
+                                <a href="#">Ссылка 3</a>
+                                <a href="#">Ссылка 4</a>
+                                <a href="#">Ссылка 5</a>
+                            </div>
+                        </div>
+                        <div class="menu-three">
+                            <li><button onclick="show_content_three()" class="dropbtn-three">Меню 3</button></li>
+                            <div id="dropdown-three" class="dropdown-content-three">
+                                <a href="#">Ссылка 1</a>
+                                <a href="#">Ссылка 2</a>
+                                <a href="#">Ссылка 3</a>
+                                <a href="#">Ссылка 4</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
