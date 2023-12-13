@@ -1,0 +1,40 @@
+table {
+    border: 3px solid gold;
+    border-radius: 10px;
+    width: 35%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, tr {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+#message_pass_error, #message_color_error, #message_email_error, #message_url_error {
+    font-size: 16px;
+    color: red;
+}
+
+#message_pass_correct, #message_color_correct, #message_email_correct, #message_url_correct {
+    font-size: 16px;
+    color: green;
+}
+
+input {
+    width: 200px;
+    border-radius: 8px;
+    border: 2px solid goldenrod;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid goldenrod;
+    background: transparent;
+}

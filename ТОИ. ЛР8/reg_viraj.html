@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form id="verif_form">
+
+            <tr>
+                <td id="label_td">
+                    <label for="password">Степень надёжности пароля</label>
+                </td>
+                <td><input type="text" id="password" name="pass_verif"></td>
+                <td><button onclick="verification_pass(event)">Проверить</button></td>
+                
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="message_pass_correct"></span>
+                    <span id="message_pass_error"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="label_td">
+                    <label for="color">Код цвета в шестнадцатеричном формате</label>
+                </td>
+                <td><input type="text" id="color" name="color_verif"></td>
+                <td><button onclick="verification_color(event)">Проверить</button></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="message_color_correct"></span>
+                    <span id="message_color_error"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="label_td"><label for="e-mail">Валидация e-mail</label></td>
+                <td><input type="text" id="e-mail" name="email_verif"></td>
+                <td><button onclick="verification_email(event)">Проверить</button></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="message_email_correct"></span>
+                    <span id="message_email_error"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="label_td"><label for="url">URL-адрес</label></td>
+                <td><input type="text" id="url" name="url_verif"></td>
+                <td><button onclick="verification_url(event)">Проверить</button></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <span id="message_url_correct"></span>
+                    <span id="message_url_error"></span>
+                </td>
+            </tr>
+
+        </form>
+    </table>
+
+    <script src="verificate.js"></script>
+</body>
+</html>
