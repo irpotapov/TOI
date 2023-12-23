@@ -26,19 +26,33 @@ function create_leaf() {
 function snowfall() {
   var snow_area = document.getElementById('falling_elements');
   var number_of_snow = 50;
+  var interval_snow = 100;
 
-  for(var i = 0; i < number_of_snow; i++) {
-    snow_area.appendChild(create_snowflake());
-  }
+  var i = 0;
+  var snowfall_interval = setInterval(function() {
+    if (i < number_of_snow) {
+      snow_area.appendChild(create_snowflake());
+      i++;
+    } else {
+      clearInterval(snowfall_interval);
+    }
+  }, interval_snow);
 }
 
 function leaffall() {
 	var leaf_area = document.getElementById('falling_elements');
 	var number_of_leaf = 50;
+  var interval_leaf = 100;
 
-	for(var i = 0; i < number_of_leaf; i++) {
-		leaf_area.appendChild(create_leaf());
-	}
+  var i = 0;
+  var leaffall_interval = setInterval(function() {
+    if(i < number_of_leaf) {
+      leaf_area.appendChild(create_leaf());
+      i++;
+    } else {
+      clearInterval(leaffall_interval);
+    }
+  }, interval_leaf);
 }
 
 document.getElementById('snowflakes_btn').addEventListener('click', function() {
@@ -54,26 +68,5 @@ document.getElementById('leaf_btn').addEventListener('click', function() {
   });
   leaffall();
 });
-
-/*var seasonSelector = document.querySelectorAll('input[name="season"]');
-for(var i = 0; i < seasonSelector.length; i++) {
-	seasonSelector[i].addEventListener('change', function() {
-		if(this.value == 'cold') {
-			document.querySelectorAll('.leaf').forEach(function(leaf) {
-				leaf.remove();
-			});
-			snowfall();
-      document.body.style.transition = "background-color 0.5s ease";
-      document.body.style.background = 'radial-gradient(at top, #123, #111)';
-		} else {
-			document.querySelectorAll('.snowflake').forEach(function(snowflake) {
-				snowflake.remove();
-			});
-			leaffall();
-      document.body.style.transition = "background-color 0.5s ease";
-      document.body.style.background = 'radial-gradient(at top, green, lightgreen)';
-		}
-	});
-}*/
 
 snowfall();
