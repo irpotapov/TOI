@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(#0B486B, #F56217);
+}
+
+.clock_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#romanTime {
+    margin-top: 20px;
+    font-size: 42px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+#timeZone {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 6px;
+    border: none;
+    width: 200px;
+    text-align: center;
+    background-color: transparent;
+    appearance: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#timeZone:hover {
+    background-color: #f5f5f5;
+}

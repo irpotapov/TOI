@@ -1,0 +1,171 @@
+<hmtl>
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function clockPainting() {
+
+                function toRoman(num) {
+                    if (typeof num !== 'number') return false;
+                    var digits = String(+num).split("");
+                    var key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+                    var roman_num = "";
+                    var i = 3;
+                    while (i--) {
+                        roman_num = (key[+digits.pop() + (i * 10)] || "") + roman_num;
+                    }
+                    return Array(+digits.join("") + 1).join("M") + roman_num;
+                }
+
+                var selectedTimeZone = document.getElementById("timeZone").value;
+                var localTime = new Date();
+                var targetTime = new Date(localTime.toLocaleString("en-US", { timeZone: selectedTimeZone }));
+                var hr = targetTime.getHours();
+                var min = targetTime.getMinutes();
+                var sec = targetTime.getSeconds();
+
+                var ctx = document.getElementById("canvas").getContext("2d");
+                // функция save() сохраняет в стек все значения нарисованные на canvas
+                // до её вызова
+                // в противоес ей, restore() - достаёт последние сохранённые значения
+                // из стека
+                ctx.save();
+                // очищаем облсть canvas'а в виде прямоугольника с позиции x, y - левый верхний угол,
+                // шириной 150 и высотой 150, т.е. всё область, выделенную в теге
+                ctx.clearRect(0, 0, 350, 350);
+                // чтобы нарисовать часы посередине области в 150x150 мы сдвигаем контекст
+                // в середину области, чтобы левый верхний угол контекста располагался прямо
+                // посередине canvas'а в позиции 75x75
+                ctx.translate(175, 175);
+                /*
+                Метод scale() изменяет масштаб текущего графического объекта, делает его
+               больше или меньше.
+                context.scale(scalewidth, scaleheight);
+                scalewidth Масштабирует ширину текущего графического объекта (1=100%,
+               0.5=50%, 2=200% и т.д.)
+                scaleheight Масштабирует высоту текущего графического объекта (1=100%,
+               0.5=50%, 2=200% и т.д.)
+                После этой команды все нарисованные элементы, заданные в относительных
+               величинах,
+                будут рисоваться в уменьшенном виде.
+                Более подробно смотрите: https://msiter.ru/references/html5-canvas/scale
+                */
+                ctx.scale(0.8, 0.8);
+                /*
+                Метод rotate() позволяет поворачивать текущий графический объект.
+                Чтобы графический объект был повернут, метод rotate() необходимо применить
+               до того, как объект будет нарисован.
+                context.rotate(угол);
+                Угол поворота в радианах. Чтобы пересчитать градусы в радианы,
+                следует воспользоваться следующей формулой: градусы*Math.PI/180.
+                Например: чтобы повернуть на 5 градусов,
+                проведем следующее вычисление: 5*Math.PI/180.
+               
+                Ниже осуществляется поворот на -1 градус, т.е. против часовой стрелки.
+                */
+                ctx.rotate(-Math.PI / 2);
+                // Свойство strokeStyle устанавливает/возвращает цвет, градиент или шаблон, используемый для обводки фигуры.
+                ctx.strokeStyle = "black";
+                // Свойство fillStyle устанавливает или возвращает цвет, градиент или шаблон, используемый для заливки графического объекта.
+                ctx.fillStyle = "black";
+                // задаём ширину линий
+                ctx.lineWidth = 8;
+                // Свойство lineCap устанавливает/возвращает стиль концов нарисованной линии.
+                // в нашем случае "round" стрелки будут закруглёнными на своих концах
+                ctx.lineCap = "round";
+                // сохраняем в стек все наши настройки, теперь в нашем стеке уже два объекта
+                ctx.save();
+                // Метод beginPath() начинает контур или сбрасывает текущий контур.
+                // по сути, с этой функции начинается рисование линий
+                ctx.beginPath();
+                // рисуем 12 коротких чёрточек
+                for (var i = 0; i < 12; i++) {
+                    // изначально контекст был повернту на -1 грудус, теперь же
+                    // поворачиваем его на +1 градус, первая черточка будет
+                    // нарисована для XII.
+                    ctx.rotate(Math.PI / 6);
+                    // передвигаем курсор для рисования в точку ...
+                    ctx.moveTo(100, 0);
+                    // теперь рисуем линию в абсолютных единицах, которые ещё будут
+                    // уменьшены из-за ctx.scale(0.4,0.4);
+                    ctx.lineTo(120, 0);
+                }
+                /*
+                 Метод stroke() в действительности рисует фигуру, контур которой был задан
+                ранее. По умолчанию фигура будет нарисована черным цветом.
+                 Раньше мы описывали то, что хотим нарисовать. Настоящая же прорисовка
+                происходит только сейчас.
+                 Т.е. появляется циферблат
+                 */
+                ctx.stroke();
+                // достаем последний сохраненный контекст из стэка, т.е. фактически
+                // мы удаляем все наши настройки для рисования стрелок и циферблата
+                ctx.restore();
+                ctx.save();
+                // рисуем часовую стрелку, вращая холст на нужный угол
+                ctx.rotate((Math.PI / 6) * hr +
+                    (Math.PI / 360) * min +
+                    (Math.PI / 21600) * sec);
+                ctx.lineWidth = 14;
+                ctx.beginPath();
+                ctx.moveTo(-20, 0);
+                // линия почти до часовых меток
+                ctx.lineTo(80, 0);
+                ctx.stroke();
+                ctx.restore();
+                ctx.save();
+                // минутная стрелка
+                ctx.rotate((Math.PI / 30 * min) +
+                    (Math.PI / 1800) * sec);
+                ctx.lineWidth = 10;
+                ctx.beginPath();
+                ctx.moveTo(-28, 0);
+                ctx.lineTo(112, 0);
+                ctx.stroke();
+                ctx.restore();
+                ctx.save();
+                // секундная стрелка
+                ctx.rotate(sec * Math.PI / 30);
+                ctx.strokeStyle = "#D40000";// цвет контура
+                ctx.fillStyle = "#D40000";
+                ctx.lineWidth = 6;
+                ctx.beginPath();
+                ctx.moveTo(-30, 0);
+                ctx.lineTo(83, 0);
+                ctx.stroke();
+                ctx.restore();
+                ctx.restore();
+
+                var selectedTimeZone = document.getElementById("timeZone").value;
+                var romanTime = toRoman(hr) + ":" + toRoman(min) + ":" + toRoman(sec);
+                document.getElementById("romanTime").innerHTML = romanTime;
+            }
+            window.onload = function () {
+                setInterval(clockPainting, 1000);
+            }
+        </script>
+
+    </body>
+    <div class="clock_container">
+        <canvas id="canvas" height="350" width="350"></canvas>
+        <div id="romanTime"></div>
+        <select id="timeZone">
+            <option value="Europe/Moscow">Москва</option>
+            <option value="Asia/Irkutsk">Иркутск</option>
+            <option value="Europe/Samara">Самара</option>
+            <option value="Asia/Yekaterinburg">Екатеринбург</option>
+            <option value="Asia/Krasnoyarsk">Красноярск</option>
+            <option value="Asia/Vladivostok">Владивосток</option>
+            <option value="Asia/Kamchatka">Камчатка</option>
+            <option value="America/New_York">Нью-Йорк</option>
+            <option value="Asia/Tokyo">Токио</option>
+        </select>
+    </div>
+
+    </html>
